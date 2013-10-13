@@ -8,7 +8,6 @@ ini_set('display_errors', '1');
 
 include $path."/../config.php";
 include $path."/../app/request.php";
-include $path."/../app/facebook.php";
 include $path."/../app/controller.php";
 include $path."/../app/app.php";
 

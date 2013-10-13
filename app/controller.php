@@ -3,19 +3,11 @@ class Controller {
 
 	public static function index() {
 		$base = rtrim(self::$app->request->base(), '/');
-		$me = self::$app->me();
-		$yield = self::partial('default', get_defined_vars(), 'html');
+		$addresses = Config::$addresses;
+		$logo_url = Config::$logo_url;
+		$title = Config::$title;
+		$yield = self::partial('splash', get_defined_vars(), 'html');
 		self::view('index', get_defined_vars(), 'html');
-	}
-	
-	public static function me() {
-		$me = self::$app->me();
-		if(self::$ext == 'js') {
-			$designs = self::$app->files_in_folder(self::$app->path().'/../public/designs/');
-			self::view('me', get_defined_vars(), 'js');	
-		} else {
-			self::view('me', get_defined_vars(), 'json');
-		}
 	}
 
 	public static function error() {

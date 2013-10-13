@@ -108,217 +108,98 @@ html {
 	height: 100%;
 }
 
-/*
-	Default design style
-	Iconset from: http://www.iconfinder.com/search/?q=iconset%3Awpzoom-developer-icon-set
-*/
-body.default {
+body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #f6f7f8;
+	background: white;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: -moz-radial-gradient(center, ellipse cover, #f6f7f8 45%, #d6d6d6 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(45%,#f6f7f8), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover, #f6f7f8 45%,#d6d6d6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover, #f6f7f8 45%,#d6d6d6 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover, #f6f7f8 45%,#d6d6d6 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center, #f6f7f8 45%,#d6d6d6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f7f8', endColorstr='#d6d6d6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-	body.default #page {
-		position: relative;
-		top: 50%;
-	}
-
-		body.default #container {
-			width: 320px;
-			top: -50%;
-			margin: -171px auto 0 auto;
-		}
-
-body.default section.card {
-	position: relative;
-	background-color: white;
-	border: 1px solid #d3d6db;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	z-index: 1;
-}
-
-body.default section.card:hover {
-	top: -2px;
-	left: -2px;
-	border-color: #adb3bc;
-	-webkit-box-shadow:  1px 1px 0px 1px #d3d6db;
-    box-shadow:  1px 1px 0px 1px #d3d6db;
-}
-
-	body.default section.card .cover {
+	body #page {
 		position: relative;
 		width: 100%;
-		height: 118px;
-		overflow: hidden;
-		z-index: 2;
-		-webkit-border-top-left-radius: 3px;
-		-webkit-border-top-right-radius: 3px;
-		-moz-border-radius-topleft: 3px;
-		-moz-border-radius-topright: 3px;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
+		max-width: 960px;
+		margin: 0 auto;
 	}
 
-		body.default section.card .cover img {
-			position: relative;
-			display: block;
+	.brand {
+		width: 40%;
+		margin: 30px auto;
+	}
+
+		.brand img {
 			width: 100%;
 			height: auto;
-			z-index: 3;
+			margin-left: -5%;
 		}
 
-	body.default section.card h1 {
-		position: absolute;
-		top: 85px;
-		left: 80px;
-		z-index: 4;
-		color: white;
-		margin: 0 .3em .3em 0;
-		text-rendering: optimizelegibility;
-		text-shadow: 0 0 3px rgba(0,0,0,0.8);
-		font-size: 24px;
-		font-weight: 500;
-		line-height: 30px;
-	}
-
-	body.default section.card .picture {
-		position: absolute;
-		z-index: 5;
-		top: 75px;
-		left: 10px;
-		display: inline-block;
-		padding: 3px;
-		background-color: #fff;
-		border: 1px solid #d3d6db;
-		-webkit-border-radius: 2px;
-	}
-
-		body.default section.card .picture img {
-			display: block;
-			width: 50px;
-			height: 50px;
-		}
-
-	body.default section.card .details {
-		margin-left: 78px;
-		padding: .5em 0;
-		color: #6a7480;
-		font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-		line-height: 150%;
-		font-size: 11px;
-	}
-
-	body.default section.card .details a {
-		color: #6a7480;
-		text-decoration: none;
-	}
-
-	body.default section.card .details a:hover {
-		text-decoration: underline;
-	}
-
-		body.default section.card .details p {
-			margin-bottom: .2em;
-		}
-
-		body.default section.card .work {
-			padding-left: 23px;
-			background-repeat: no-repeat;
-			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMpJREFUeNpi/P//PwMlgAVdYN2WvSCxACAWQpN6B8Trg3yc/+I1AAhSgXgaDgszgHgmsgATFkUiQAyyRQFoGyMIA9mKUDExdMWMoDAAOtseyHYDYmYgtgJiSyDuRVNbDMTHgfgY1LCdQMMPwbywBmozMijH4jpbKAaBFCAWh3mBD0pnA/EEPIHeD8Q5ULYAtjB4Dw1tXABDnomBQjAMDEBPiaAEI49HPUjuHzYD3gCxFBC3ErAwGYn9CtkAJyDWI9H1F+FJmRIAEGAAjb8rtiwkRj0AAAAASUVORK5CYII=);
-		}
-
-		body.default section.card .email {
-			padding-left: 23px;
-			background-repeat: no-repeat;
-			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPtJREFUeNpi/P//PwMlgImBQsACItZt2csKpKSAmJlIfX+B+FmQj/NvFqjAXiC2JdHyg0DsAPOCORAfAOKFRGhcAFVriR4G/ECcD8QT8WieAMQFQCyAEgZQYAg12QWIvwBxNZrmViDuh6oxAOJf6AYwQCU2A7EnEPMBcS5UfBIQdwPxTqgaBmwugAGQ7X+AuApqCyihNCLJMeAzYA8QBwLxFCBWBWIfIGaE2nwTiAOAeAMQO2Mz4DhUwWQgToCKPYLSvEBsBXUNSM0uIDZGN+A/NIpCkMR40VyYBBX7j+4CUMi6EZmAQqH0DmQDPJDjlkjwAUQwDnhuBAgwADcVM78RGM7nAAAAAElFTkSuQmCC);
-		}
-
-		body.default section.card .location {
-			padding-left: 23px;
-			background: no-repeat;
-			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWZJREFUeNqkk0srhGEUx+dFKZLJFxBioRQbC7ExuSwmDCViJSt8BeUjWLgsXCZqaBZosJqywIaFnUSMkpVyLWWD1+/kvNPpwcac+nXezuX/PpfzeL7vh3KxAjewubtXhpuAKJRr+Aa2YaY3Gnm29Z5dAc09uCUQkTtYAynoU7F7GEFk54cAzTHchsQ0l6RwQHMtuFaY1HyMnKwolGeWvWyaxVaCD4oPcfWQgTOI0xPOCmDjEDbNW5B2jucSumAQSmHMCnTDq35PwSh//TBnU4KrgRM4hnftyQpUwBzMQzvc0pSEfM3XakMxFEEhVFoB2fsnTEOTFvUHy8TO4dTZkmcFrqEOqpyiRj3EF1wDrJtcxgqkoAMuYNEU7ZubkH1fmVzKCszqIcoQxTX2AIk/JvhRz+xbAHUJDEMzrGrRAvE3cxPVuDa9gaFgpN1R7tS/ymAdwJGmZIgi8KTN6V/fQs6P6T/2JcAAo3N6y88vMVwAAAAASUVORK5CYII=);
-		}
-
-body.default section.timeline {
-	display: block;
-	width: 2px;
-	margin: 3px auto;
-	padding: 4px 0;
-	text-align: center;
-	background-color: #d3d6db;
-}
-
-	body.default section.timeline .node {
+	.contact {
 		display: block;
-		margin: 0 0 0 -4px;
-		padding: 0;
-		width: 6px;
-		height: 6px;
-		background-color: #d3d6db;
-		border: 2px solid #f6f7f8;
-		font-size: 0;
-		line-height: 0;
-		-webkit-border-radius: 50px;
-		-moz-border-radius: 50px;
-		border-radius: 50px;
+		margin: 20px 0;
 	}
 
-	body.default section.timeline:hover .node {
-		background-color: #adb3bc;
-		border-color: white;
+	.contact:after {
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    clear: both;
+	    visibility: hidden;
 	}
 
-body.default section.bio {
-	position: relative;
-	background-color: white;
-	border: 1px solid #d3d6db;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	z-index: 1;
+		.addresses {
+			float: left;
+			width: 40%;
+			margin: 0 4% 30px 4%;
+		}
+
+			.addresses h2 {
+				padding: 4px 0;
+				text-align: center;
+				border-bottom: 1px solid #AAA;
+			}
+
+			.addresses dl {
+				display: block;
+				margin: 0 0 15px 0;
+				padding: 0;
+			}
+
+			.addresses dl:after {
+			    content: ".";
+			    display: block;
+			    height: 0;
+			    clear: both;
+			    visibility: hidden;
+			}
+
+				.addresses dt {
+					float: left;
+					width: 33%;
+					color: #777;
+					text-align: right;
+				}
+
+				.addresses dd {
+					float: left;
+					width: 50%;
+				}
+
+				.addresses dd.inset {
+					margin-left: 37.5%;
+				}
+
+
+
+@media (max-width: 479px) {
+	.addresses {
+		float: none;
+		width: auto;
+	}
 }
 
-body.default section.bio:hover {
-	top: -2px;
-	left: -2px;
-	border-color: #adb3bc;
-	-webkit-box-shadow:  1px 1px 0px 1px #d3d6db;
-    box-shadow:  1px 1px 0px 1px #d3d6db;
+@media (max-width: 767px) {
+	#page {
+		width: auto;
+	}
 }
-
-	body.default section.bio h2 {
-		margin: 0;
-		padding: .9em 1em .7em 3em;
-		font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-		color: #6a7480;
-		background-color: #f6f7f8;
-		background-repeat: no-repeat;
-		background-position: 1em center;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATlJREFUeNqkk79KA0EQh008sbERwT4aLIRYiUXQItHS6hQLOwN5gnsA8R0UIaWtaCUmhcF/p43VQVCsNBAbEU80hYGE81uYwLKsdwYHPmZ3dvZ3M7u3qSiKhv5jKZvA8Ul9DLcGoxLqwJG7uty2CrBhgvEcDEs8DztG7jbcyrgHAYLvjgSuYDahWlOwAbm0TLJQhQWYB88i4MmayqnBjAo6WoJPSXdyBve4Z60lVfIp69+yfo0rmgL9AxzBrcMTG/ykW3AssTLsQRexSURC/C7zTXiERT05bRF4EN+CTxlfQAUOEewlVaA2NeEc1PW+wg18wEtsC5S6hLtU/wdsQQEycAAr8EXOeFwLXajDmRBI3IVpmIprQSXsw4ZRVf+LoTbPmgJvUBL+ai1doChvYRALfn2Ng9iPAAMAISNhh9FPXwYAAAAASUVORK5CYII=);
-		border-bottom: 1px solid #d3d6db;
-		line-height: 100%;
-		font-size: 12px;
-		font-weight: 700;
-	}
-
-	body.default section.bio .bio {
-		padding: 1em;
-		font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-		font-size: 11px;
-	}
-
-	body.default section.bio p:last-child {
-		margin-bottom: 0;
-	}
-

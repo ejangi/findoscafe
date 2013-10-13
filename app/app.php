@@ -7,8 +7,6 @@ class App {
 			'json' => 'application/json',
 			'js' => 'text/javascript'
 		);
-	
-
 
 	public function __construct() {
 		$this->request = new Request();
@@ -24,33 +22,6 @@ class App {
 		} else {
 			Controller::error();
 		}
-	}
-
-	public function me($json = false) {
-		if(file_exists($this->me_file())) {
-			if($json) {
-				return json_decode(file_get_contents($this->me_file()));	
-			} else {
-				return file_get_contents($this->me_file());
-			}
-		} else {
-			// error
-			return null;
-		}
-	}
-
-	public function me_file() {
-		return realpath($this->path().'/..'.Config::$me_file);
-	}
-
-	public function files_in_folder($folder) {
-		$files = array();
-		$folder = realpath($folder);
-		foreach (new DirectoryIterator($folder) as $fileInfo) {
-		    if($fileInfo->isDot() && !$fileInfo->isFile()) continue;
-		    $files[] = $fileInfo->getFilename();
-		}
-		return $files;
 	}
 
 	public function path() {
