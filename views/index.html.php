@@ -26,6 +26,6 @@
 		</div>
 	</div>
 	<script src="<?php echo @$base; ?>/jquery.js"></script>
-	<script src="<?php echo @$base; ?>/findos.js"></script>
+	<script src="<?php echo @$base; ?>/app.js"></script>
 </body>
 </html>

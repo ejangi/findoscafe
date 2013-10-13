@@ -24,5 +24,7 @@ class Config {
 		);
 	public static $title = 'Findos Cafe, Toowoomba';
 	public static $logo_url = 'https://www.facebook.com/findoscafe';
-
+	public static $social = array(
+			'facebook' => 'https://www.facebook.com/findoscafe'
+		);
 }

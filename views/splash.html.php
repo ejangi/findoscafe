@@ -6,7 +6,7 @@
 			<h2><?php echo $address["name"]; ?></h2>
 			<dl class="phone">
 				<dt>Phone:</dt>
-				<dd><?php echo $address["phone"]; ?></dd>
+				<dd><span class="tel"><?php echo $address["phone"]; ?></span></dd>
 			</dl>
 			<dl class="address">
 				<dt>Address:</dt>
@@ -22,5 +22,14 @@
 			<?php endif; ?>
 		</section>
 		<?php endforeach; ?>
+		<?php if(isset($social) && count($social) > 0): ?>
+		<section id="social" class="social">
+			<ul>
+			<?php foreach($social as $name => $url): ?>
+				<li class="<?php echo @$name; ?>"><a href="<?php echo @$url; ?>"><img src="<?php echo @$base; ?>/images/<?php echo $name; ?>.png"></a></li>
+			<?php endforeach; ?>
+			</ul>
+		</section
+		<?php endif; ?>
 	</div>
 </div>

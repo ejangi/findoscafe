@@ -2,5 +2,5 @@ AddHandler php5-script .php
 
 RewriteEngine On
 RewriteRule ^favicon\.ico$ /images/favicon.ico [L]
-RewriteCond $1 !^(index\.php|jquery\.js|ejangi\.js|master\.css|files|images|designs|robots\.txt)
+RewriteCond $1 !^(index\.php|jquery\.js|app\.js|master\.css|files|images|designs|robots\.txt)
 RewriteRule ^(.*)$ /index.php/$1 [L]

@@ -6,6 +6,7 @@ class Controller {
 		$addresses = Config::$addresses;
 		$logo_url = Config::$logo_url;
 		$title = Config::$title;
+		$social = Config::$social;
 		$yield = self::partial('splash', get_defined_vars(), 'html');
 		self::view('index', get_defined_vars(), 'html');
 	}
