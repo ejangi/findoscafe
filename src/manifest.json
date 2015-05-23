@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "html": {
+        "files": ["index.html"]
+    },
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.less"
+      ],
+      "main": true
+    },
+    "modernizr.js": {
+      "vendor": "vendor/modernizr/modernizr.js"
+    }
+  },
+  "config": {
+    "devUrl": "findoscafe.dev",
+    "devPath": "dist"
+  },
+  "paths": {
+    "source": "src/",
+    "dist": "dist/"
+  }
+}

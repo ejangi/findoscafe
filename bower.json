@@ -1,0 +1,11 @@
+{
+  "name": "findoscafe-website",
+  "authors": [
+    "James Angus <james@ejangi.com>"
+  ],
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "modernizr": "~2.8.3"
+  }
+}
