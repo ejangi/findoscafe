@@ -12,6 +12,7 @@ var swig        = require('gulp-swig');
 var data        = require('gulp-data');
 var revReplace  = require('gulp-rev-replace');
 var runSequence = require('run-sequence');
+var ghPages     = require('gulp-gh-pages');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./src/manifest.json');
@@ -234,6 +235,12 @@ gulp.task('build', function(callback) {
       'html',
       'revreplace',
       callback);
+});
+
+// Deploy to github pages:
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 
